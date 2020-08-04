@@ -1,9 +1,8 @@
 import React from 'react';
+import Router from './router/Router';
 
-function App() {
-  return (
-    <div className="App" />
-  );
-}
+const App: React.FunctionComponent = () => (
+  <Router />
+);
 
 export default App;
