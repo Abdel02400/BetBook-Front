@@ -1,0 +1,10 @@
+module.exports = {
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    rules: {
+        "jsx-ally/anchor-is-valid": "off",
+        // "import/no-unresolved": "off
+    }
+}
