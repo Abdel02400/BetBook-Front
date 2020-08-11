@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { path } from './route.utils';
+import path from './route.utils';
 import NotFound from '../template/notfound/NotFound';
 
 const Router: React.FunctionComponent = () => (

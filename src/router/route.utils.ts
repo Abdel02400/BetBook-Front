@@ -1,4 +1,4 @@
-import { REGEX_PARAM_ROUTER } from '../config/regex';
+import REGEX_PARAM_ROUTER from '../config/regex';
 import { routes as appRoutes, RouteInterface } from './routes';
 
 /**
@@ -14,7 +14,7 @@ import { routes as appRoutes, RouteInterface } from './routes';
  *               utiliser pour les tests
  * @return {string} L'url correspondant à la routeName
  */
-export const path = (
+const path = (
   routeName: string,
   options?: { [key: string]: string},
   paramMustBeReplace?: boolean,
@@ -31,7 +31,9 @@ export const path = (
     if (paramMustBeReplace === undefined) paramMustBeReplace = false;
     if (params === null) throw new Error('Function routeHaveParams failed !');
 
-    if (paramMustBeReplace && (options === undefined || options === null)) throw new Error(`Missing parameters: ${params?.join(', ')}`);
+    if (paramMustBeReplace && (options === undefined || options === null)) {
+      throw new Error(`Missing parameters: ${params?.join(', ')}`);
+    }
 
     route = replaceParams(
       route,
@@ -108,3 +110,5 @@ const addRestOptionsToQueryString = (
   });
   return res;
 };
+
+export default path;

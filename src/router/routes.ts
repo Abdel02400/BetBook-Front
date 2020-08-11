@@ -4,7 +4,7 @@ export interface RouteInterface {
 
 export const routes: { [key: string]: RouteInterface } = {
   login: {
-    path: '/login',
+    path: '/login/{id}:desktop',
   },
   signup: {
     path: '/signup',
